@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>MY STORY | Personagens</title>
 
     <script src="./js/funcoes.js"></script>
 
-    <link rel="icon" href="./assets/icon/faviconico.">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="./assets/icon/faviconico." />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <div class="container">
-            <h1>MY STORY</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">Inicial</a>
-                </li>
-                <li class="agora">
-                    <a href="./personagem.html">Personagens</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
-                <li>
-                    <a href="./cadastro.html">Cadastro</a>
-                </li>
-            </ul>
-        </div>
+      <div class="container">
+        <h1>MY STORY</h1>
+        <ul class="navbar">
+          <li>
+            <a href="./index.html">Inicial</a>
+          </li>
+          <li class="agora">
+            <a href="./personagem.html">Personagens</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="./login.html">Login</a>
+          </li>
+          <li>
+            <a href="./cadastro.html">Cadastro</a>
+          </li>
+        </ul>
+      </div>
     </div>
-
 
     <!-- simulador inicio -->
     <div id="vida">
-    <h2>Personagens</h2>
+      <h2>Personagens importantes da minha vida</h2>
     </div>
     <div class="lista">
-        <div id="gif">
-            <img src="https://i.pinimg.com/originals/eb/42/4e/eb424e84b542dca79acab1fa1cb1183a.gif"
-            alt="gif do toy STORY" style="height: 400px;width:400px" id="gif1">
-            <img src="https://c.tenor.com/T0azUxdRFDsAAAAC/andy-coming.gif" alt="gif engracado"
-                style="height: 400px;width:400px; display:none" id="gif2">
+      <div id="gif">
+        <img
+          src="https://i.pinimg.com/originals/eb/42/4e/eb424e84b542dca79acab1fa1cb1183a.gif"
+          alt="gif do toy STORY"
+          style="height: 400px; width: 400px"
+          id="gif1"
+        />
+        <img
+          src="https://c.tenor.com/T0azUxdRFDsAAAAC/andy-coming.gif"
+          alt="gif engracado"
+          style="height: 400px; width: 400px; display: none"
+          id="gif2"
+        />
+      </div>
+      <div id="listinhas">
+        <li>Dulce Santos</li>
+        <li>Jeazi Barbosa do Santos</li>
+        <li>Jonatas Aparecido do Santos</li>
+        <li>Dulcelene Aparecida dos Santos</li>
+        <li>Maria Eduarda</li>
+        <li>Bruno Henrique Silva</li>
+        <li>Vinícius Vilas</li>
+        <li>Luã Chaves</li>
+        <br /><br />
+        <div class="btn">
+          <button onclick="vindo()" style="display: block" id="botao1">
+            O Andy ta vindo
+          </button>
+          <button onclick="voltar()" style="display: none" id="botao2">
+            Voltar
+          </button>
         </div>
-        <div id="listinhas">
-            <li>Dulce Santos</li>
-            <li>Jeazi Barbosa do Santos</li>
-            <li>Jonatas Aparecido do Santos</li>
-            <li>Dulcelene Aparecida dos Santos</li>
-            <li>Dulcelene Aparecida dos Santos</li>
-            <li>Bruno Henrique Silva</li>
-            <li>Vinícius Vilas</li>
-            <li>Luã Chaves</li>
-            <br><br>
-            <div class="btn">
-                <button onclick="vindo()" style="display: block;" id="botao1">O Andy ta vindo</button>
-                <button onclick="voltar()" style="display:none;" id="botao2">Voltar</button>
-            </div>
-        </div>
-            <!-- 
+      </div>
+      <!-- 
             <div class="gifs">
                 
             </div> -->
@@ -76,27 +87,24 @@
 
     <!--footer inicio-->
     <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por Guilherme Henrique dos Santos &copy; 2021</h4>
-        </div>
+      <div class="container">
+        <h4>Feito com amor por Guilherme Henrique dos Santos &copy; 2021</h4>
+      </div>
     </div>
     <!--footer fim-->
-
-
-</body>
-
+  </body>
 </html>
 <script>
-    function vindo() {
-        botao1.style.display = "none";
-        gif1.style.display = "none";
-        botao2.style.display = "block";
-        gif2.style.display = "block";
-    }
-    function voltar() {
-        botao1.style.display = "block";
-        gif1.style.display = "block";
-        botao2.style.display = "none";
-        gif2.style.display = "none";
-    }
+  function vindo() {
+    botao1.style.display = "none";
+    gif1.style.display = "none";
+    botao2.style.display = "block";
+    gif2.style.display = "block";
+  }
+  function voltar() {
+    botao1.style.display = "block";
+    gif1.style.display = "block";
+    botao2.style.display = "none";
+    gif2.style.display = "none";
+  }
 </script>
