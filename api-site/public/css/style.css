@@ -1,0 +1,458 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  background-color: #54a4cb;
+  
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  
+}
+
+.header {
+  color: #ffed03;
+  border-bottom: 3px solid #ffed03;
+  background-color: #ff4040 ;
+  /* border: 3px solid yellow; */
+  }
+  
+.header h1{
+  -webkit-text-stroke-width: 1.8px ;
+  -webkit-text-stroke-color: #32b9cd;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  /* border: 3px solid pink; */
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffed03;
+}
+
+.agora {
+  font-weight: 800;
+}
+
+.navbar {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  color:#ffed03;
+  /* border: 3px solid green; */
+}
+
+/* BANNER */
+
+.banner {
+  height: 500px;
+  color: black;
+  /* border: 3px solid yellow; */
+  background-image: url("https://images7.alphacoders.com/333/thumb-1920-333950.jpg");
+  background-size: cover;
+  
+}
+
+.banner .container {
+  /* border: 3px solid green; */
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.banner p {
+  /* border: 3px solid cyan; */
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  font-size: 36px;
+  margin-left: 350px;
+}
+
+.banner span {
+  font-weight: 800;
+}
+.banner .social{
+  background-image: url("https://images7.alphacoders.com/333/thumb-1920-333950.jpg");
+
+}
+/* missao visao valores */
+
+
+.social .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* border: 3px solid blue; */
+}
+
+/* usar este bloco para explicar margin e padding*/
+.social .titulo {
+  /* border: 3px solid pink; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  /* background-image: linear-gradient(to bottom, #54a4cb,#5b8fac  ,#a3d4e5 , #d8dada); */
+  height: 150px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ff4040 ;
+  bottom: 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  top: 100%;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+/* cadastro */
+.fundo1{
+  background-image: url("https://1.bp.blogspot.com/-uaZ8BDIVsR4/XYrvHTR6lFI/AAAAAAAAcQg/dgVCAxRiRl4v-8pKqvbcrh4wXI9TXqhMQCLcBGAsYHQ/s2560/2019-toy-story-4-4k-1b-2560x1440.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+
+}
+/* LOGIN */
+.fundo2{
+  background-image: url("https://1.bp.blogspot.com/-UEh03_WSgTM/XM-yAcroleI/AAAAAAAAYG0/KepH6Ob0-LIBu48gxZVdz4Gga0825Xi5wCLcBGAs/s2560/toy-story-4-2560x1440-woody-buzz-lightyear-animation-4k-17903.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+
+}
+.banner-login {
+  color: white;
+  height: 550px;
+  /* border: 3px solid yellow; */
+  
+}
+
+.banner-login .container {
+  height: 550px;
+  /* border: 3px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-login {
+  color: 	white;
+  font-weight: bold;
+}
+
+.banner-login .card {
+  background-color: rgba(255, 64, 64, 0.1);
+  height: 450px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.banner-login a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner-login #div_erros_login {
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* FORMULARIO */
+
+input {
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.btn {
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: black;
+  background-color: #54a4cb;
+  width: 120px;
+  align-self: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-div {
+  width: 50px;
+  /* border: 3px solid pink; */
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
+/* PAGINA DOS GRÁFICOS */
+
+.janela {
+  display: flex;
+  width: 100vw;
+  /* height: 100vh; */
+}
+
+.header-left a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-right: 3px solid #32b9cd;
+  background-color: #ff4040;
+  /* border: 3px solid pink; */
+}
+
+.dash-right {
+  display: flex;
+  width: 75%;
+  height: fit-content;
+  background-color: #161618;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
+
+.header-left h1 {
+  color: #32b9cd;
+  color: #ffed03;
+  border-bottom: 3px solid #ffed03;
+  -webkit-text-stroke-width: 1.8px ;
+  -webkit-text-stroke-color: #32b9cd;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hello {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hello h3 {
+  color: #ffed03;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.hello h3 span {
+  font-weight: 800;
+}
+
+.btn-nav {
+  width: 40%;
+  color: black;
+  background-color: #ffed03;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2% 5%;
+}
+
+.btn-nav-white {
+  width: 40%;
+  background-color: #dacb00;
+  border: 3px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2% 5%;
+}
+
+.btn-nav-white h3 {
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-nav h3,
+.btn-logout h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-logout {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #54a4cb;
+  color:black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+#gifs img{
+  width: 400px;
+  height:400px;
+  margin-top: 30px;
+  right: 50vw;
+  margin-left: 10vw;
+}
+
+
+.social .boxes {
+  display: flex;
+  /* border: 3px solid blue; */
+}
+.social .box1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 33%;
+  /* border: 3px solid yellow; */
+}
+/* MUDANÇAS */
+section{
+  height: 10%;
+  padding: 100px;
+  background-color: #54a4cb;
+}
+.row{
+  position: relative;
+  width:100%;
+  display: flex;
+}
+.row .col50{
+  position:relative;
+  width: 45%;
+  margin-top: -6%;
+}
+
+
+.content img{
+  position: relative;
+  width: 620px;
+  bottom: 20%;
+  height:320px;
+  border-radius: 10px;
+
+}
+.tittleText{
+  width: 200px;
+  left:50% ;
+  color: #ffed03;
+  font-weight:bold;
+  font-size: 50px;
+}
+
+.containerleft img{
+  position: relative;
+  width: 567px ;
+  height:320px;
+  border-radius: 10px;
+  object-fit:cover ;
+}
+.containerleft{
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+}
+.containerleft p{
+  margin-left: 40px;
+  width: 47vw;
+  margin-bottom: 50px;
+}
+.containerleft h2{
+  margin-left: 13px;
+}
+
+
+  .containerleft h2 {
+  padding: 20px;
+  border-radius: 20px;
+  color: #ffed03;
+  font-weight:bold;
+  font-size: 50px;
+  margin: 0;
+  margin-top:10px;
+  width: 70vh;
+  height:10px;
+  }
+.containerleft{
+  margin-left: -23px;
+}
+
+select {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* margin: 2.5% 0;
+  padding: 4% 6%; */
+  background-color: white;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  opacity: 95%;
+  justify-content: center;
+  align-self: center;
+}
+
+.alinhar {
+  text-align: center;
+}
+.lista{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  columns: center;
+}
+#vida h2{
+  color: #ffed03;
+}

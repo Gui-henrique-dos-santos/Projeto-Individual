@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/funcoes.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/segundapagina.css">
+    <title>Rank de Personagens favoritos</title>
+</head>
+
+<body onload="rank()">
+    <div class="grafico1">
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="inner_header">
+
+            <ul class="navbar">
+
+                <div class="janela">
+                    <div class="header-left">
+                        <h1>MY STORY</h1>
+
+                        <div class="hello">
+                            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                        </div>
+
+                        <div class="btn-nav-white">
+                            <h3>Ranking</h3>
+                        </div>
+
+                        <div class="btn-nav">
+                            <a href="./quizdospersonagens.html">
+                                <h3>Quiz</h3>
+                            </a>
+                        </div>
+
+
+                        <div class="btn-logout">
+                            <a href="index.html">
+                                <h3>Sair</h3>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="grafico">
+                    <canvas id="personagens" 
+                    style="background-color:    #ffed03;" width="403" height="253"
+                        class="chartjs-render-monitor"></canvas>
+        </div>
+
+    </div>
+
+    </a>
+    </div>
+</body>
+
+</html>
+<script>
+    var yValues = [];
+
+    function rank() {
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        fetch("/rank/dadosgraph", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    yValues.push(json.Woody);
+                    yValues.push(json.Buzz);
+                    yValues.push(json.jessie);
+                    yValues.push(json.Batata);
+                    yValues.push(json.Rex);
+                    yValues.push(json.Slinky);
+                    yValues.push(json.Porquinho);
+                    yValues.push(json.Betty);
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar a obtencao de dados!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar')[0]
+
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active')
+    })
+
+
+
+    var xValues = ['Xerife Woody', 'Buzz Lightyear', 'Jessie', 'Sr. Cabeça de Batata', 'Rex', 'Slinky', 'Porquinho', 'Betty'];
+
+
+
+    var barColors = ['black', 'pink', 'orange', 'blue', 'Brown', 'green', 'grey', 'red'];
+
+    function graficop() {
+        new Chart("personagens", {
+            type: "horizontalBar",
+            data: {
+
+                labels: xValues,
+                datasets: [{
+                    fill: true,
+                    lineTension: 0,
+                    backgroundColor: barColors,
+                    borderColor: barColors,
+                    data: yValues,
+                }]
+            },
+            options: {
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: -12,
+                        bottom: 0
+                    }
+                },
+
+                elements: {
+                    bar: {
+                        borderWidth: 2,
+                    }
+                },
+                responsive: true,
+
+                legend: {
+
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Ranking de Personagens'
+                },
+                aspectRatio: 4,
+                maintainAspectRatio: false,
+
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            min: 0,
+                            max: 30
+                        }
+                    }],
+                    xAxes: [{
+                        barPercentage: 0.9,
+                        barThickness: 40,
+                        ticks: {
+                            min: 0,
+                            max: 20
+                        }
+                    }],
+
+                }
+            }
+        });
+    }
+    setTimeout(() => graficop(), 2000);
+</script>

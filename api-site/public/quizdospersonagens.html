@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/funcoes.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="./css/segundapagina.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Joguinho</title>
+</head>
+
+<body>
+    <div class="janela">
+        <div class="header-left">
+            <h1>MY STORY</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav">
+                <a href="./analytics.html">
+                    <h3>Ranking</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+
+                <h3>Quiz</h3>
+
+            </div>
+
+
+            <div class="btn-logout">
+                <a href="index.html">
+                    <h3>Sair</h3>
+                </a>
+            </div>
+
+        </div>
+        <h1>Qual o nome deles?</h1>
+        <div class="caixa">
+            <div class="jogo">
+                <img src="https://cdn.wallpapersafari.com/42/78/YLNFSH.jpg" alt=""><br><br>
+                <select name="questao1" id="numero1">
+                    <option value="null">selecione uma opçâo</option>
+                    <option value="pers1">Buzz Lightyear</option>
+                    <option value="erro1">Buzz</option>
+                    <option value="erro2">Lightyear</option>
+                </select><br><br>
+                <img src="https://images7.alphacoders.com/333/thumb-1920-333914.jpg" alt="">
+                <br><br>
+                <select name="questao2" id="numero2">
+                    <option value="null1">selecione uma opçâo</option>
+                    <option value="pers2">Xerife Woody</option>
+                    <option value="erro3">Woody</option>
+                    <option value="erro4">Wody</option>
+                </select><br><br>
+                <br><br>
+                <img src="https://images6.alphacoders.com/333/thumb-350-333947.jpg" alt=""><br><br>
+                <select name="questao3" id="numero3">
+                    <option value="null2">selecione uma opçâo</option>
+                    <option value="erro5">Dinoussaro</option>
+                    <option value="pers3">Rex</option>
+                    <option value="erro6">Dinoussaro Rex</option>
+                </select><br><br>
+                <img src="https://conteudo.imguol.com.br/c/entretenimento/e5/2019/06/18/betty-personagem-que-volta-a-toy-story-depois-de-20-anos-sem-aparecer-na-franquia-1560894345857_v2_4x3.jpg"
+                    alt=""><br><br>
+                <select name="questao4" id="numero4">
+                    <option value="null3">selecione uma opçâo</option>
+                    <option value="erro8">Bety</option>
+                    <option value="erro7">Betyy</option>
+                    <option value="pers4">Betty</option>
+                </select>
+            </div>
+            <div id="btn-jogo">
+                <button onclick="validacao()">validar</button>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    function validacao() {
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        if (numero1.value == 'null') {
+            alert('selecione uma opção na primeira imagem')
+
+        }
+        else if (numero2.value == 'null1') {
+            alert('selecione uma opção na segunda imagem')
+        }
+        else if (numero3.value == 'null2') {
+            alert('selecione uma opção na terceira imagem')
+        }
+        else if (numero4.value == 'null3') {
+            alert('selecione uma opção na quarta imagem')
+        }
+        if (numero1.value == 'pers1' && numero2.value == 'pers2' && numero3.value == 'pers3' && numero4.value == 'pers4') {
+            alert(`parabens ${sessionStorage.NOME_USUARIO} você acertou tudo`)
+        }
+        if (numero1.value != 'pers1') {
+            alert('você errou a primeira');
+        }
+        if (numero2.value != 'pers2') {
+            alert('você errou a segunda');
+        }
+        if (numero3.value != 'pers3') {
+            alert('você errou a terceira');
+        }
+        if (numero4.value != 'pers4') {
+            alert('você errou a quarta');
+        }
+    }
+</script>
